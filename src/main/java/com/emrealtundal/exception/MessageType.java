@@ -5,8 +5,7 @@ import lombok.Getter;
 @Getter
 public enum MessageType {
 
-    NO_RECORD_EXIST("1001","kayıt bulunamadı"),
-    GENERAL_EXCEPTION("9999","genel bir hata oluştu");
+    NO_RECORD_EXIST("1001","kayıt bulunamadı");
 
     private String code;
 

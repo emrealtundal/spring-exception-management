@@ -1,16 +1,6 @@
 package com.emrealtundal.handler;
 
-import com.emrealtundal.exception.BaseException;
-import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.ControllerAdvice;
-import org.springframework.web.bind.annotation.ExceptionHandler;
-
-@ControllerAdvice // : "bu class tüm exceptionları yakalayan sınıftır" demiş olduk
 public class GlobalExceptionHandler {
 
-    @ExceptionHandler(value = {BaseException.class})
-    public ResponseEntity<String> handleBaseException(BaseException exception){
-        return  ResponseEntity.badRequest().body(exception.getMessage());
-    }
 
 }
