@@ -29,7 +29,7 @@ public class EmployeeServiceImpl implements IEmployeeService {
         Optional<Employee> optional = employeeRepository.findById(id);
 
         if(optional.isEmpty()){
-            return null;
+            throw new BaseException(new ErrorMessage(MessageType.RETURN_NULL_EXCEPTION, id.toString()));
         }
         Employee dbEmployee = optional.get();
         Department dbDepartment = dbEmployee.getDepartment();
