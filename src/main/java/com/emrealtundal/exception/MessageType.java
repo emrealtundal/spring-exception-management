@@ -1,11 +1,13 @@
 package com.emrealtundal.exception;
 
+
 import lombok.Getter;
 
 @Getter
 public enum MessageType {
 
-    NO_RECORD_EXIST("1001","kayıt bulunamadı");
+    NO_RECORD_EXIST("1001","kayıt bulunamadı"),
+    GENERAL_EXCEPTION("9999", "genel bir hata oluştu");
 
     private String code;
 
